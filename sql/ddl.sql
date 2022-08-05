@@ -1,3 +1,5 @@
+-- DDL - Data Definition Language - (CREATE, ALTER, DROP, TRUNCATE, COMMENT, RENAME)
+
 CREATE TABLE base_de_dados.users (
 	id INT UNSIGNED auto_increment NOT NULL,
 	first_name varchar(150) NULL,
@@ -33,4 +35,6 @@ CREATE TABLE base_de_dados.profiles (
 );
 
 ALTER TABLE base_de_dados.users ADD created_at DATETIME DEFAULT NOW() NOT NULL;
+
 ALTER TABLE base_de_dados.users ADD updated_at DATETIME DEFAULT NOW() ON UPDATE NOW() NOT NULL;
+
